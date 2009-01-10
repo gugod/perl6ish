@@ -4,7 +4,7 @@ use warnings;
 
 use Test::More tests => 9;
 
-use Perl6ish::Syntax::temp;
+use Perl6ish;
 
 {
     my %x = (food => 'yes', mood => 'good');

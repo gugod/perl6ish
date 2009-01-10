@@ -4,12 +4,18 @@ use strict;
 use warnings;
 our $VERSION = '0.01';
 
+sub import {
+    my $caller = caller;
+    eval "package $caller; use Perl6ish::Syntax::temp";
+    return 1;
+}
+
 1;
 __END__
 
 =head1 NAME
 
-Perl6ish -
+Perl6ish - Some Perl6 programming in Perl5 code.
 
 =head1 SYNOPSIS
 
