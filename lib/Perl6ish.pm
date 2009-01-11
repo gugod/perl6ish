@@ -10,6 +10,7 @@ sub import {
     eval <<CODI;
 package $caller;
 use Perl6::Caller;
+use Perl6::Say;
 use Perl6ish::Syntax::temp;
 use Perl6ish::Syntax::state;
 
