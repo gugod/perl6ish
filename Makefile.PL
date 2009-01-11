@@ -4,6 +4,7 @@ all_from 'lib/Perl6ish.pm';
 
 requires
     'Perl6::Caller' => 0.04,
+    'Perl6::Take' => 0.04,
     'Variable::Alias' => 0.01,
     'Scalar::Util' => 1.19,
     'Devel::Caller' => 2.03,
