@@ -6,7 +6,15 @@ our $VERSION = '0.01';
 
 sub import {
     my $caller = caller;
-    eval "package $caller; use Perl6ish::Syntax::temp; use Perl6ish::Syntax::state;";
+
+    eval <<CODI;
+package $caller;
+use Perl6::Caller;
+use Perl6ish::Syntax::temp;
+use Perl6ish::Syntax::state;
+
+CODI
+
     return 1;
 }
 
