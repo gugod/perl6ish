@@ -2,9 +2,7 @@ package Perl6ish::Syntax::state;
 use strict;
 use warnings;
 use Scalar::Util qw(refaddr);
-use Devel::Caller qw(caller_args called_with caller_vars caller_cv);
-
-use Data::Dump qw(pp);
+use Devel::Caller qw(called_with caller_cv);
 
 use Devel::Declare;
 use Variable::Alias ();
@@ -27,11 +25,7 @@ sub handle_state {
         my $var = "$sigil$name";
         my $stash_var = "\$Perl6ish::Syntax::state::stash{'$var'}";
 
-        # substr( $line, $Offset, length($statement) ) = "my $var; $stash_var ||= $val; $var = $stash_var; Variable::Alias::alias( $var, $stash_var ); ";
-
         substr( $line, $Offset, length($statement) ) = "(my $var, $val);";
-
-        # pp "XXX $line";
 
         Devel::Declare::set_linestr($line);
     }
