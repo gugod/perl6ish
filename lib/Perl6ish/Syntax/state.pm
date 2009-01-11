@@ -21,12 +21,9 @@ sub handle_state {
 
     if (my ($statement, $sigil, $name, $val) = $line =~ /(\bstate\s+([\$\@\%])(\w+)\s*=\s*(.+);)/) {
         skip_declarator;
-
         my $var = "$sigil$name";
-        my $stash_var = "\$Perl6ish::Syntax::state::stash{'$var'}";
 
         substr( $line, $Offset, length($statement) ) = "(my $var, $val);";
-
         Devel::Declare::set_linestr($line);
     }
 }
@@ -37,9 +34,8 @@ sub state(\$$) {
     my $caller_addr = refaddr( caller_cv(1) );
     my $k = "$caller_addr $varname";
     $$varref = $stash{ $k } ||= $varval;
-
     Variable::Alias::alias( $$varref, $stash{ $k } );
-};
+}
 
 sub import {
     my $caller = caller;
