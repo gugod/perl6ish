@@ -3,6 +3,7 @@ name 'Perl6ish';
 all_from 'lib/Perl6ish.pm';
 
 requires
+    'Perl6::Slurp' => 0.03,
     'Perl6::Caller' => 0.04,
     'Perl6::Take' => 0.04,
     'Variable::Alias' => 0.01,
