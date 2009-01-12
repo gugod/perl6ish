@@ -21,6 +21,14 @@ sub max {
     List::Util::max(@$self);
 }
 
+sub uniq {
+    my ($self) = @_;
+}
+
+sub elems {
+    my ($self) = @_;
+    0+@$self;
+}
 
 1;
 
