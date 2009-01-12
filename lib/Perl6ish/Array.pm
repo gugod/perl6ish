@@ -2,12 +2,14 @@ use strict;
 package Perl6ish::Array;
 use List::Util ();
 
-sub new {
-    my $self = ref($_[1]) eq "ARRAY" ? $_[1] : [];
-    bless $self, $_[0];
-    $self;
+sub xx {
+    my ($self, $n) = @_;
+    my @ret = ();
+    for(1..$n) {
+        push @ret, @{$self}
+    }
+    return \@ret;
 }
-
 
 sub min {
     my ($self) = @_;
