@@ -15,6 +15,10 @@ use Perl6::Take;
 use Perl6::Say;
 use Perl6ish::Syntax::temp;
 use Perl6ish::Syntax::state;
+use Perl6ish::Array;
+use Perl6ish::Hash;
+use Perl6ish::String;
+use Perl6ish::Autobox;
 
 CODI
 

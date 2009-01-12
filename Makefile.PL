@@ -8,6 +8,7 @@ requires
     'Perl6::Take' => 0.04,
     'Data::Bind' => 0.30,
     'Scalar::Util' => 1.19,
+    'List::Util' => 1.19,
     'Devel::Caller' => 2.03,
     'Devel::Declare' => 0.0304,
     'Devel::BeginLift' => 0.001002,
