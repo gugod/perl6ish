@@ -5,7 +5,7 @@ use Scalar::Util qw(refaddr);
 use Devel::Caller qw(called_with caller_cv);
 
 use Devel::Declare;
-use Variable::Alias ();
+use Data::Bind;
 
 our ($Declarator, $Offset);
 
@@ -34,7 +34,8 @@ sub state(\$$) {
     my $caller_addr = refaddr( caller_cv(1) );
     my $k = "$caller_addr $varname";
     $$varref = $stash{ $k } ||= $varval;
-    Variable::Alias::alias( $$varref, $stash{ $k } );
+
+    bind_op2( $varref, \$stash{$k} );
 }
 
 sub import {
