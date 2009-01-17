@@ -39,13 +39,18 @@ Perl6ish - Some Perl6 programming in Perl5 code.
 
 =head1 DESCRIPTION
 
-Perl6ish is
+Perl6ish allows you to write Perl5 code some Perl6 look-n-feel. It
+uses many good evil techniques to extend Perl5 syntax. Many of which
+has been already done in the C<Perl6::*> namespace, some of them are
+coded only in the Perl6ish distrition.
 
 =head1 AUTHOR
 
 Kang-min Liu E<lt>gugod@gugod.orgE<gt>
 
 =head1 SEE ALSO
+
+L<Rubyish>
 
 =head1 LICENSE AND COPYRIGHT
 
