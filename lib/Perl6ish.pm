@@ -19,6 +19,7 @@ use Perl6ish::Array;
 use Perl6ish::Hash;
 use Perl6ish::String;
 use Perl6ish::Autobox;
+use Perl6ish::Syntax::DotMethod;
 
 CODI
 
