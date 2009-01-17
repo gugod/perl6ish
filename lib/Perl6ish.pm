@@ -44,6 +44,24 @@ uses many good evil techniques to extend Perl5 syntax. Many of which
 has been already done in the C<Perl6::*> namespace, some of them are
 coded only in the Perl6ish distrition.
 
+When you say C<use Perl6ish> in your code, it's exactualy the same
+as saying this:
+
+    use Perl6::Slurp;
+    use Perl6::Caller;
+    use Perl6::Take;
+    use Perl6::Say;
+    use Perl6ish::Syntax::temp;
+    use Perl6ish::Syntax::state;
+    use Perl6ish::Array;
+    use Perl6ish::Hash;
+    use Perl6ish::String;
+    use Perl6ish::Autobox;
+    use Perl6ish::Syntax::DotMethod;
+
+C<Perl6ish::Syntax::*> modules are syntax extensions. Currently two
+variable declarators are implemented: C<temp> and C<state>.
+
 =head1 AUTHOR
 
 Kang-min Liu E<lt>gugod@gugod.orgE<gt>
