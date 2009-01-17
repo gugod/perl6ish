@@ -3,6 +3,8 @@ name 'Perl6ish';
 all_from 'lib/Perl6ish.pm';
 
 requires
+    'Readonly' => 1.03,
+    'Perl6::Perl' => 0.01,
     'Perl6::Slurp' => 0.03,
     'Perl6::Caller' => 0.04,
     'Perl6::Take' => 0.04,

@@ -9,6 +9,7 @@ sub import {
 
     eval <<CODI;
 package $caller;
+use Perl6::Perl 'perl';
 use Perl6::Slurp;
 use Perl6::Caller;
 use Perl6::Take;
@@ -18,8 +19,8 @@ use Perl6ish::Syntax::state;
 use Perl6ish::Array;
 use Perl6ish::Hash;
 use Perl6ish::String;
-use Perl6ish::Autobox;
 use Perl6ish::Syntax::DotMethod;
+use Perl6ish::Autobox;
 
 CODI
 
