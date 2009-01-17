@@ -10,7 +10,7 @@ requires
     'Scalar::Util' => 1.19,
     'List::Util' => 1.19,
     'Devel::Caller' => 2.03,
-    'Devel::Declare' => 0.0304,
+    'Devel::Declare' => 0.003004,
     'Devel::BeginLift' => 0.001002,
     'B::Hooks::Parser' => 0.08;
 
@@ -18,6 +18,6 @@ tests 't/*.t';
 author_tests 'xt';
 
 build_requires 'Test::More';
-use_test_base;
+
 auto_include;
 WriteAll;
