@@ -18,6 +18,7 @@ use Perl6::Contexts;
 use Perl6::Junction qw/all any one none/;
 use Perl6ish::Syntax::temp;
 use Perl6ish::Syntax::state;
+use Perl6ish::Syntax::constant;
 use Perl6ish::Array;
 use Perl6ish::Hash;
 use Perl6ish::String;
@@ -51,20 +52,25 @@ coded only in the Perl6ish distrition.
 When you say C<use Perl6ish> in your code, it's exactualy the same
 as saying this:
 
+    use Perl6::Perl 'perl';
     use Perl6::Slurp;
     use Perl6::Caller;
     use Perl6::Take;
     use Perl6::Say;
+    use Perl6::Contexts;
+    use Perl6::Junction qw/all any one none/;
     use Perl6ish::Syntax::temp;
     use Perl6ish::Syntax::state;
+    use Perl6ish::Syntax::constant;
     use Perl6ish::Array;
     use Perl6ish::Hash;
     use Perl6ish::String;
-    use Perl6ish::Autobox;
     use Perl6ish::Syntax::DotMethod;
 
-C<Perl6ish::Syntax::*> modules are syntax extensions. Currently two
-variable declarators are implemented: C<temp> and C<state>.
+C<Perl6ish::Syntax::*> modules are syntax extensions. Variable
+declarators, C<temp>, C<state> and C<constant>, are implemented under
+this namespace. They can be used alone if you prefer not to load all
+those moduels above all at once.
 
 =head1 AUTHOR
 
