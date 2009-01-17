@@ -6,8 +6,8 @@ use base 'autobox';
 sub import {
     (shift)->SUPER::import(
         ARRAY  => 'Perl6ish::Array',
-        # HASH   => 'Perl6ish::Hash',
-        # STRING => 'Perl6ish::String'
+        HASH   => 'Perl6ish::Hash',
+        STRING => 'Perl6ish::String'
     );
 }
 
