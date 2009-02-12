@@ -19,7 +19,6 @@ use Perl6::Say;
 use Perl6::Contexts;
 use Perl6::Junction qw/all any one none/;
 use Perl6ish::Syntax::temp;
-use Perl6ish::Syntax::state;
 use Perl6ish::Syntax::constant;
 use Perl6ish::Array;
 use Perl6ish::Hash;
@@ -27,7 +26,10 @@ use Perl6ish::String;
 use Perl6ish::Syntax::DotMethod;
 CODI
 
-    B::Hooks::Parser::inject('use Perl6ish::Autobox;');
+    B::Hooks::Parser::inject($_) for(
+	"use feature 'state';",
+	"use Perl6ish::Autobox;"
+    );
 
     return 1;
 }
