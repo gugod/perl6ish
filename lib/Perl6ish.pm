@@ -2,6 +2,7 @@ package Perl6ish;
 
 use strict;
 use warnings;
+
 our $VERSION = '0.02';
 use B::Hooks::Parser;
 

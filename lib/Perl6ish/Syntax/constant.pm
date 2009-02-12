@@ -20,7 +20,7 @@ sub handle_constant {
         substr( $line, $Offset, length($statement) ) = "(my $var, $val);";
         Devel::Declare::set_linestr($line);
 
-        print "emit: $line\n" if $sigil eq '@';
+        # print "emit: $line\n" if $sigil eq '@';
     }    
 }
 
