@@ -1,4 +1,7 @@
 use strict;
 use Test::More tests => 1;
 
-BEGIN { use_ok 'Perl6ish' }
+use Perl6ish;
+pass;
+
+

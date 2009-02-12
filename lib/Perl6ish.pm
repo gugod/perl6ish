@@ -3,6 +3,7 @@ package Perl6ish;
 use strict;
 use warnings;
 our $VERSION = '0.02';
+use B::Hooks::Parser;
 
 sub import {
     my $caller = caller;
@@ -23,10 +24,9 @@ use Perl6ish::Array;
 use Perl6ish::Hash;
 use Perl6ish::String;
 use Perl6ish::Syntax::DotMethod;
-
-use Perl6ish::Autobox;
-
 CODI
+
+    B::Hooks::Parser::inject('use Perl6ish::Autobox;');
 
     return 1;
 }
